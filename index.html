@@ -33,16 +33,50 @@
 								<li><a href="#school">School</a></li>
 								<li><a href="#friends">Friends</a></li>
 								<li><a href="#work">Work</a></li>
-								<li><a href="#music">Music</a></li>
+								<li><a href="#music">Hobby</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
 					</header>
 
+					<!DOCTYPE html>
+<html lang="en">
+
+
+    <!-- Audio Element -->
+	 <br><br>
+    <audio id="audio" class="song" loop>
+        <source src="藤井風満ちてゆくpiano coverOverflowing.mp3" type="audio/mpeg">
+        Your browser isn't invited for super fun audio time.
+    </audio>
+
+    <!-- Button to Control Audio -->
+    <button id="playButton">Music On?</button>
+
+    <script>
+        // Get the audio element and button
+        const audio = document.getElementById('audio');
+        const playButton = document.getElementById('playButton');
+
+        // Add event listener to the button
+        playButton.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                playButton.textContent = 'Music Off?'; // Change button text
+            } else {
+                audio.pause();
+                playButton.textContent = 'Music On?'; // Change button text
+            }
+        });
+    </script>
+
+
+
 				<!-- Main -->
 					<div id="main">
 
 						<!-- Intro -->
+						
 							<article id="school">
 								<h2 class="major">School</h2>
 								<span class="image main"><img src="images/pic01.png" alt="" /></span>
@@ -123,7 +157,7 @@
 
 						<!-- music -->
 							<article id="music">
-								<h2 class="major">Music</h2>
+								<h2 class="major">Hobby</h2>
 								<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
 								<p>I really enjoy playing music, it's like medcine to my anxiety and stress.</p>
 								<img src = "images/utmco.jpg"><br>
@@ -143,6 +177,7 @@
 								<img src = "images/mac performance.jpg" width = 500>
 								<img src = "images/kch fest performance.jpg" width = 500>
 							</p>
+
 							</article>
 
 						<!-- Elements -->
